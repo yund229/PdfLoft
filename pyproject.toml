@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdfloft"
+version = "1.0.0"
+description = "Every PDF chore in one CLI: merge, split, extract text, images <-> PDF. One dependency."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "yund229" }]
+keywords = ["pdf", "merge", "split", "cli", "extract-text", "pymupdf"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Text Processing",
+]
+dependencies = [
+    "PyMuPDF>=1.24",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "ruff>=0.4", "Pillow>=9.0"]
+
+[project.scripts]
+pdfloft = "pdfloft.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yund229/PdfLoft"
+Issues = "https://github.com/yund229/PdfLoft/issues"
+
+[tool.setuptools]
+packages = ["pdfloft"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP"]
+ignore = ["E501"]
