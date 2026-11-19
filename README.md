@@ -60,6 +60,7 @@ Any command taking `--pages` understands `1`, `1-3`, `1-3,5`, with 1-based numbe
 - [DirTidy](https://github.com/yund229/DirTidy) — auto-organize your Downloads folder, with undo
 - [RectGif](https://github.com/yund229/RectGif) — drag a rectangle on screen, get an animated GIF
 
+- [VocabPill](https://github.com/yund229/VocabPill) - pop-up flashcards for CET-4/CET-6 words, Leitner spaced repetition, zero dependencies
 ## License
 
 MIT
